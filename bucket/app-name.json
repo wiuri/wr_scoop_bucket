@@ -1,0 +1,24 @@
+{
+    "homepage": "https://github.com/InfpHub/Raptor",
+    "version": "2024.2.1",
+    "license": "GPL-3.0 license",
+    "url": "https://github.com/InfpHub/Raptor/releases/download/2024.2.1/Raptor-2024.2.1-Windows-x64.zip",
+    "hash": "6EE8E585F784954A36CF396C3FA591DF7E35E330981ACA9DA8770A0DE0A3E5EB",
+    "bin": "Raptor.exe",
+    "shortcuts": [
+        [
+            "Raptor.exe",
+            "Raptor",
+            "--portable"
+        ]
+    ],
+    "persist": "Data",
+    "checkver": {
+        "url": "https://api.github.com/repos/InfpHub/Raptor/releases/latest",
+        "jp": "$.name",
+        "regex": "Release v(.*)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/InfpHub/Raptor/releases/tag/$version/Raptor-{$version}-Windows-x64.zip"
+    }
+}
